@@ -1,0 +1,15 @@
+---
+title: "README"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r embed_xaringan}
+xaringanExtra::embed_xaringan(
+  url = "https://build-your-own-universe.netlify.app",
+  ratio = "16:9"
+)
+```
