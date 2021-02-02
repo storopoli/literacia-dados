@@ -24,6 +24,14 @@ Ou em formato BibTeX para LaTeX:
       year = {2021}
     }
 
+## Para configurar um ambiente local:
+
+1.  Clone o repositório do GitHub:
+    `git clone https://github.com/storopoli/literacia-dados.git`
+2.  Acesse o diretório: `cd literacia-dados`
+3.  Instale os pacotes necessários: `Rscript install.R`
+4.  Renderize os slides: `Rscript -e 'rmarkdown::render("index.Rmd")'`
+
 ## Licença
 
 Este obra está licenciado com uma Licença [Creative Commons
