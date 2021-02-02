@@ -327,7 +327,7 @@ knitr::include_graphics("images/dist.png")
 
 --
 .pull-left[
-```{r dist-normal}
+```{r dist_normal}
 ggplot(data.frame(x = c(-4, 4)), aes(x, size = 3)) + 
   mapply(function(mean, sd, col) {
     stat_function(fun = dnorm, args = list(mean = mean, sd = sd), col = col)
@@ -352,7 +352,7 @@ ggplot(data.frame(x = c(-4, 4)), aes(x, size = 3)) +
 
 --
 .pull-right[
-```{r dist-not-normal}
+```{r dist_not_normal}
 ggplot(data.frame(x = c(-1, 6)), aes(x, size = 3)) + 
   mapply(function(meanlog, sdlog, col) {
     stat_function(fun = dlnorm, args = list(meanlog = meanlog, sdlog = sdlog), col = col)
