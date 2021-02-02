@@ -1,0 +1,5 @@
+# Cornell University on November 9, 1964
+
+youtube-dl https://www.youtube.com/watch\?v\=EYPapE-3FRw --sub-lang pt --write-auto-sub --convert-subs srt -o feynman_temp.mp4
+
+ffmpeg -i feynman_temp.mp4 -vf "subtitles=feynman_temp.srt:force_style='Borderstyle=4,Fontsize=16,BackColour=&H80000000&'" -ss "0:0:00" -to "0:1:03" -max_muxing_queue_size 9999 feynman.mp4

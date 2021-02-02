@@ -272,3 +272,6 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   width: 100%;
   flex: 1 1 auto;
 }
+white {
+  color: white !important;
+}

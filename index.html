@@ -25,6 +25,7 @@
 class: center, middle, inverse, title-slide
 
 # Literacia de Dados
+## Slides – <a href="https://storopoli.io/literacia-dados">.white[storopoli.io/literacia-dados]</a>
 ### Jose Storopoli, PhD
 ### <img src="images/UNINOVE_CIS.png" width="124" /><img src="images/UNINOVE_PPGA.png" width="124" />
 ### 08/02/2021
@@ -84,13 +85,103 @@ top:1em;right:1em;
 })()</script>
 </div>
 
+# Literacia de Dados
+
+.pull-left[
+![](images/corona-news-1.jpg)&lt;!-- --&gt;
+
+]
+
+.pull-right[
+![](images/corona-news-2.jpeg)&lt;!-- --&gt;
+]
+
+???
+
+O modelo de risco proporcional de Cox se baseia numa função de sobrevivência e um conjunto de covariáveis `\(h(t)=h_{0}(t) \times \exp \left\{b_{1} x_{1}+b_{2} x_{2}+\cdots+b_{p} x_{p}\right\}\)`. Onde `\(h_0\)` é o risco basal, que é estimada de maneira não-paramétrica (diferente de outros modelos estatísticos), portanto a assume-se que a sobrevivência não segue uma distribuição estatística particular. O modelo de Cox é essencialmente uma regressão linear múltipla do logaritmo do risco das variáveis `\(x_i\)`, com o risco basal sendo uma "constante" que varia com o tempo. As covariáveis, então, agem multiplicativamente sobre o risco em qualquer ponto no tempo, e isso nos fornece a suposição-chave do modelo PH: o risco do evento em qualquer grupo é um múltiplo constante do risco em qualquer outro.
+
+---
 
 #  Literacia de Dados
 
-Definição da Wikipedia - https://pt.wikipedia.org/wiki/Alfabetização_de_dados
+**Definição da Wikipedia**:
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+"capacidade de &lt;u&gt;ler&lt;/u&gt;, &lt;u&gt;gerenciar&lt;/u&gt;, &lt;u&gt;analisar&lt;/u&gt; e &lt;u&gt;argumentar&lt;/u&gt; por meio de &lt;u&gt;dados&lt;/u&gt; (...) requer certas habilidades que envolvem a &lt;u&gt;leitura e a compreensão de dados&lt;/u&gt;, também conhecidos como informações"
+]
+
+.footnote[[Wikipedia - Alfabetização de Dados](https://pt.wikipedia.org/wiki/Alfabetização_de_dados).]
 
 ---
 # O que são Dados?
+
+**Definição da OCDE**:
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+Dados são &lt;u&gt;características&lt;/u&gt; ou &lt;u&gt;informações&lt;/u&gt;, geralmente numéricas, &lt;u&gt;coletadas por meio de observação&lt;/u&gt; sobre uma ou mais pessoas ou objetos.
+]
+
+.footnote[Traduzido de: **OECD** - Glossary of Statistical Terms. OECD. 2008. p. 119. ISBN 978-92-64-025561.]
+
+---
+# Dados Abertos
+
+&lt;img src="images/osf_example.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+.footnote[[Repositório de dados da OSF](https://osf.io/ypbf6/) do artigo: Storopoli, J., da Silva Neto, W. L. B., &amp; Mesch, G. S. (2020). Confidence in social institutions, perceived vulnerability and the adoption of recommended protective behaviors in Brazil during the COVID-19 pandemic. Social Science &amp; Medicine, 265, 113477.]
+
+---
+# Dados Abertos
+
+.pull-left[
+[Agência FAPESP](https://agencia.fapesp.br/historico-de-atividade-fisica-nao-interfere-no-prognostico-de-casos-graves-de-covid-19/35048/)
+
+&lt;img src="images/ag-fapesp-news.png" width="460" /&gt;
+
+]
+
+.pull-right[
+[medRxiv](https://www.medrxiv.org/content/10.1101/2020.11.25.20237925v1)
+
+&lt;img src="images/ag-fapesp-full.png" width="369" /&gt;
+]
+
+
+---
+# Dados Abertos
+
+.pull-left[
+[`Brasil.io`](https://brasil.io/datasets/)
+
+&lt;img src="images/brasil-io.png" width="513" /&gt;
+]
+
+.pull-right[
+[`juliohm/awesome-brazil-data`](https://github.com/juliohm/awesome-brazil-data)
+
+&lt;img src="images/awesome-brazil-data.png" width="546" /&gt;
+]
+
+---
+
+# Como que a Ciência Avança?
+
+**Método Científico Hipótetico Dedutivo**
+
+<div id="htmlwidget-9eceb20dc2a931752ae4" style="width:100%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9eceb20dc2a931752ae4">{"x":{"diagram":"\n digraph hipotetico_dedutivo {\n  forcelabels = true;\n  graph [overlap = false,\n         fontsize = 12,\n         rankdir = TD]\n  node [shape = oval,\n        fontname = Helvetica]\n  A [label = \"Teoria\"]\n  B [label = \"Empiria\"]\n  A -> B [dir = forward,\n          xlabel = \" Hipótese  \",\n          tailport = \"e\",\n          headport = \"e\"]\n  B -> A [dir = backward,\n          xlabel = \"Predições \",\n          tailport = \"w\",\n          headport = \"w\"]\n} \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+.footnote[[Wikipedia - Método hipotético-dedutivo](https://pt.wikipedia.org/wiki/Método_hipotético-dedutivo).]
+
+---
+class: center, middle
+# Método Científico
+
+&lt;video width="600" height="400" controls&gt;
+  &lt;source src="images/feynman.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+.footnote[[Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) - Universidade de Cornell, 9 de Novembro de 1964]
 
 ---
 # Como que a Ciência Avança?
@@ -121,44 +212,43 @@ exposto ao longo do tempo, para a identificação dos efeitos da exposição na
 incidência do evento de interesse.
 
 ---
-## Estatística
+# Estatística
 
+--
 .pull-left[
-### Descritiva
-<div id="htmlwidget-bcc569e9a5fb6f3f4fe2" style="width:100%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bcc569e9a5fb6f3f4fe2">{"x":{"diagram":"\n digraph estatistica_descritiva {\n  graph [overlap = false,\n         fontsize = 12,\n         rankdir = LR]\n  node [shape = oval,\n        fontname = Helvetica]\n  A [label = \"Dados\nObservados\"]\n  node [shape = box,\n        fontname = Helvetica]\n  B [label = \"Média\"]; C [label = \"Mediana\"]; D [label = \"Moda\"]; E [label = \"Desvio\nPadrão\"]\n  A -> {B C D E} [dir = forward,\n                    tailport = \"e\",\n                    headport = \"w\"]\n} \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+**Descritiva**
+<div id="htmlwidget-f30d7598595affc4f25a" style="width:100%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f30d7598595affc4f25a">{"x":{"diagram":"\n digraph estatistica_descritiva {\n  graph [overlap = false,\n         fontsize = 12,\n         rankdir = LR]\n  node [shape = oval,\n        fontname = Helvetica]\n  A [label = \"Dados\nObservados\"]\n  node [shape = box,\n        fontname = Helvetica]\n  B [label = \"Média\"]; C [label = \"Mediana\"]; D [label = \"Moda\"]; E [label = \"Desvio\nPadrão\"]\n  A -> {B C D E} [dir = forward,\n                    tailport = \"e\",\n                    headport = \"w\"]\n} \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 ]
 
+--
 .pull-right[
-### Inferencial
-<div id="htmlwidget-23dada22fc5642de2fc1" style="width:100%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-23dada22fc5642de2fc1">{"x":{"diagram":"\n digraph estatistica_inferencial {\n  forcelabels = true;\n  graph [overlap = false,\n         fontsize = 12,\n         rankdir = TD]\n  node [shape = oval,\n        fontname = Helvetica]\n  A [label = \"Processo de\nGeração de Dados\"]\n  B [label = \"Dados\nObservados\"]\n  A -> B [dir = forward,\n          xlabel = \"  Probabilidade  \",\n          tailport = \"e\",\n          headport = \"e\"]\n  B -> A [dir = backward,\n          label = \"  Inferência  \",\n          tailport = \"w\",\n          headport = \"w\"]\n} \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+**Inferencial**
+<div id="htmlwidget-b85bf888dc62471906a9" style="width:100%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b85bf888dc62471906a9">{"x":{"diagram":"\n digraph estatistica_inferencial {\n  forcelabels = true;\n  graph [overlap = false,\n         fontsize = 12,\n         rankdir = TD]\n  node [shape = oval,\n        fontname = Helvetica]\n  A [label = \"Processo de\nGeração de Dados\"]\n  B [label = \"Dados\nObservados\"]\n  A -> B [dir = forward,\n          xlabel = \"  Probabilidade  \",\n          tailport = \"e\",\n          headport = \"e\"]\n  B -> A [dir = backward,\n          label = \"  Inferência  \",\n          tailport = \"w\",\n          headport = \"w\"]\n} \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-# Machine Learning vs Estatística
-
-
+# Distribuição Estatística
 
 .pull-left[
-### Estatística
+&lt;img src="images/dist_anim.gif" style="display: block; margin: auto;" /&gt;
 
-&lt;img src="index_files/figure-html/estatistica-plot-1.png" width="504" /&gt;
 ]
 
 .pull-right[
-### Machine Learning
-
-&lt;img src="index_files/figure-html/ml-plot-1.png" width="504" /&gt;
+&lt;img src="images/dist.png" width="700" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
 # Distribuições Normais e não-Normais
 
+--
 .pull-left[
 &lt;img src="index_files/figure-html/dist-normal-1.png" width="504" /&gt;
 ]
 
+--
 .pull-right[
 &lt;img src="index_files/figure-html/dist-not-normal-1.png" width="504" /&gt;
 ]
@@ -170,46 +260,1027 @@ incidência do evento de interesse.
 
 .footnote[Figura de [Katherine Hoffman](https://www.khstats.com/blog/tmle/tutorial/). Reprodução Autorizada.]
 
+???
+**Katherine Hoffman**: Biostatistician at Weill Cornell Medicine in New York City
+
+---
+class: inverse, middle, center
+
+# Estatística Descritiva
+
+<i class="fas  fa-chart-pie fa-5x "></i>
+
+---
+# Estatística Descritiva
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+"Sumariza e quantifica as características de uma amostra de dados observados".
+]
+
+--
+
+## Geralmente dividi-se em:
+
+* **Medidas de Centralidade**: média, mediana, moda ...
+
+* **Medidas de Dispersão**: desvio padrão, variância, correlação, percentis, quartis ...
+
 ---
 # Medidas de Centralidade - Média, Mediana e Moda
+
+&lt;img src="images/media_mediana_moda.png" width="38%" style="display: block; margin: auto;" /&gt;
+
+---
+# Média vs Mediana
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+O que acontece quando o &lt;u&gt;Bill Gates&lt;/u&gt; entra em um restaurante?
+]
+
+--
+.washed-blue.bg-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
+A &lt;u&gt;média salarial&lt;/u&gt; dos consumidores do restaurante sobre 50 mil dólares!
+]
 
 ---
 # Medidas de Dispersão - Desvio Padrão
 
+&lt;img src="images/desvio_padrao.png" width="100%" /&gt;
+
 ---
-# Medidas de Dispersão
+# Medidas de Dispersão - Percentil e IQR
 
-### Percentil
+&lt;img src="images/percentil-IQR.png" width="50%" style="display: block; margin: auto;" /&gt;
 
-### IQR
+---
+class: inverse, middle, center
+
+# Estatística Descritiva
+
+<i class="fas  fa-bullseye fa-5x "></i>
+
+## Colocando em Prática
 
 ---
 # Como ler tabelas
 
----
-# Como ler gráficos
+.pull-left[
+&lt;img src="images/penguis-species.png" width="600" /&gt;
+]
+
+.pull-right[
+&lt;img src="images/penguins-bill.png" width="1296" /&gt;
+]
+
+.footnote[Da esquerda para direita: as diferentes espécies de pinguins Palmer e ilustração do bico do pinguim - Figuras de [Allison Horst](https://allisonhorst.github.io/palmerpenguins)]
+
+???
+Vamos usar o *dataset* sobre pinguins que foram encontrados próximos da estação de Palmer na Antártica
 
 ---
-# Hipótese Nula
+# Como ler tabelas
+
+
+
+.small[
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#osncjrvket .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#osncjrvket .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#osncjrvket .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#osncjrvket .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#osncjrvket .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#osncjrvket .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#osncjrvket .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#osncjrvket .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#osncjrvket .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#osncjrvket .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#osncjrvket .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#osncjrvket .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#osncjrvket .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#osncjrvket .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#osncjrvket .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#osncjrvket .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#osncjrvket .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#osncjrvket .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#osncjrvket .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#osncjrvket .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#osncjrvket .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#osncjrvket .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#osncjrvket .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#osncjrvket .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#osncjrvket .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#osncjrvket .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#osncjrvket .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#osncjrvket .gt_left {
+  text-align: left;
+}
+
+#osncjrvket .gt_center {
+  text-align: center;
+}
+
+#osncjrvket .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#osncjrvket .gt_font_normal {
+  font-weight: normal;
+}
+
+#osncjrvket .gt_font_bold {
+  font-weight: bold;
+}
+
+#osncjrvket .gt_font_italic {
+  font-style: italic;
+}
+
+#osncjrvket .gt_super {
+  font-size: 65%;
+}
+
+#osncjrvket .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="osncjrvket" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1"><strong>Características</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Adelie</strong>, N = 146<sup class="gt_footnote_marks">1</sup></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Chinstrap</strong>, N = 68<sup class="gt_footnote_marks">1</sup></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Gentoo</strong>, N = 119<sup class="gt_footnote_marks">1</sup></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left" style="font-weight: bold;">bill_length_mm</td>
+      <td class="gt_row gt_center">38.82 (2.66)</td>
+      <td class="gt_row gt_center">48.83 (3.34)</td>
+      <td class="gt_row gt_center">47.57 (3.11)</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left" style="font-weight: bold;">bill_depth_mm</td>
+      <td class="gt_row gt_center">18.35 (1.22)</td>
+      <td class="gt_row gt_center">18.42 (1.14)</td>
+      <td class="gt_row gt_center">15.00 (0.99)</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left" style="font-weight: bold;">body_mass_g</td>
+      <td class="gt_row gt_center">3,706.16 (458.62)</td>
+      <td class="gt_row gt_center">3,733.09 (384.34)</td>
+      <td class="gt_row gt_center">5,092.44 (501.48)</td>
+    </tr>
+  </tbody>
+  
+  <tfoot>
+    <tr class="gt_footnotes">
+      <td colspan="4">
+        <p class="gt_footnote">
+          <sup class="gt_footnote_marks">
+            <em>1</em>
+          </sup>
+           
+          Média (Desvio Padrão)
+          <br />
+        </p>
+      </td>
+    </tr>
+  </tfoot>
+</table></div>
+]
+
+---
+
+# Como ler tabelas
+
+.small[
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#nvyzesyyic .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nvyzesyyic .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nvyzesyyic .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nvyzesyyic .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nvyzesyyic .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nvyzesyyic .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nvyzesyyic .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nvyzesyyic .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nvyzesyyic .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nvyzesyyic .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#nvyzesyyic .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#nvyzesyyic .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nvyzesyyic .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#nvyzesyyic .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nvyzesyyic .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nvyzesyyic .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#nvyzesyyic .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#nvyzesyyic .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nvyzesyyic .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#nvyzesyyic .gt_left {
+  text-align: left;
+}
+
+#nvyzesyyic .gt_center {
+  text-align: center;
+}
+
+#nvyzesyyic .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nvyzesyyic .gt_font_normal {
+  font-weight: normal;
+}
+
+#nvyzesyyic .gt_font_bold {
+  font-weight: bold;
+}
+
+#nvyzesyyic .gt_font_italic {
+  font-style: italic;
+}
+
+#nvyzesyyic .gt_super {
+  font-size: 65%;
+}
+
+#nvyzesyyic .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="nvyzesyyic" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1"><strong>Características</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Adelie</strong>, N = 146<sup class="gt_footnote_marks">1</sup></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Chinstrap</strong>, N = 68<sup class="gt_footnote_marks">1</sup></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Gentoo</strong>, N = 119<sup class="gt_footnote_marks">1</sup></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left" style="font-weight: bold;">bill_length_mm</td>
+      <td class="gt_row gt_center">38.85 (36.73, 40.77)</td>
+      <td class="gt_row gt_center">49.55 (46.35, 51.08)</td>
+      <td class="gt_row gt_center">47.40 (45.35, 49.60)</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left" style="font-weight: bold;">bill_depth_mm</td>
+      <td class="gt_row gt_center">18.40 (17.50, 19.00)</td>
+      <td class="gt_row gt_center">18.45 (17.50, 19.40)</td>
+      <td class="gt_row gt_center">15.00 (14.20, 15.75)</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left" style="font-weight: bold;">body_mass_g</td>
+      <td class="gt_row gt_center">3,700.00 (3,362.50, 4,000.00)</td>
+      <td class="gt_row gt_center">3,700.00 (3,487.50, 3,950.00)</td>
+      <td class="gt_row gt_center">5,050.00 (4,700.00, 5,500.00)</td>
+    </tr>
+  </tbody>
+  
+  <tfoot>
+    <tr class="gt_footnotes">
+      <td colspan="4">
+        <p class="gt_footnote">
+          <sup class="gt_footnote_marks">
+            <em>1</em>
+          </sup>
+           
+          Mediana (IQR)
+          <br />
+        </p>
+      </td>
+    </tr>
+  </tfoot>
+</table></div>
+]
+
+---
+# Como ler gráficos - Diagrama de Caixa
+
+&lt;img src="images/box_plot.png" width="467" style="display: block; margin: auto;" /&gt;
+
+.footnote[Também chamado de *Box Plot*]
+
+---
+class: inverse, middle, center
+
+# Estatística Inferencial
+
+<i class="fas  fa-chart-line fa-5x "></i>
+
+---
+# Estatística Inferencial
+
+"Conjunto de técnicas e procedimentos para testar hipóteses sobre uma amostra generalizando para uma população-alvo"
+
+## Mistureba de coisas
+
+--
+
+* **Testes Estatísticos** - Pearson &amp; Student
+
+--
+
+* `\(p\)`-**valor** - Fisher
+
+--
+
+* **Hipótese Nula** (inclusive o tal dos 5%) - Neyman
+
+--
+
+* **Intervalos de Confiança** - Neyman
+
+.footnote[Além disso eles brigavam entre si...]
+
+---
+# Teste de Hipóteses
+
+.pull-left[
+**Karl Pearson**
+
+![](images/pearson.jpg)&lt;!-- --&gt;
+]
+
+--
+.pull-right[
+**William Sealy Gosset (*Student*)**
+
+&lt;img src="images/gosset.jpg" width="350" /&gt;
+]
+
+.footnote[Figuras da [Wikipedia](https://www.wikipedia.org/).]
+
+---
+
+# Teste de Hipóteses
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+Forma de &lt;u&gt;inferência estatística&lt;/u&gt; que usa dados de uma &lt;u&gt;amostra&lt;/u&gt; para tirar conclusões sobre um &lt;u&gt;parâmetro populacional&lt;/u&gt; ou uma &lt;u&gt;distribuição de probabilidade populacional&lt;/u&gt;.
+]
+
+--
+
+.washed-blue.bg-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
+.small[Exemplo: Uma amostra de 40 pessoas separadas de maneira aleatória em dois grupos na qual testamos qual a &lt;u&gt;diferença&lt;/u&gt; entre o tempo de internação na UTI (&lt;u&gt;parâmetro populacional&lt;/u&gt;) para quem toma cloroquina (tratamento) ou comprimido de farinha (placebo).
+]
+]
+
+---
+# Hipótese Nula - `\(H_0\)`
+
+.pull-left[
+**Jerzy Neyman**
+
+![](images/neyman.jpeg)&lt;!-- --&gt;
+]
+
+--
+
+.pull-right[
+Uma hipótese padrão de que uma quantidade a ser medida é **zero** (nula). Normalmente, a quantidade a ser medida é a **diferença entre duas situações**, ou que um **efeito é inexistente** (nulo).
+]
+
+.footnote[Figura da [Wikipedia](https://www.wikipedia.org/).]
+
+---
+class: inverse, middle, center
+# `\(p\)`-valor
+
+<i class="fas  fa-exclamation-triangle fa-5x "></i>
+
+## `\(p\)`-valores são de difícil entendimento, `\(p&lt;0.05\)`.
+
+---
+# O que é o `\(p\)`-valor?
+
+* `\(p\)`-valor é a probabilidade dos dados que você obteve condicionado que a hipótese nula é verdadeira.
+
+--
+
+* No mundo paralelo da Hipótese Nula, `\(p\)`-valor é a probabilidade de você obter dados como os quais da sua amostra.
+
+--
+
+* Para os que gostam do formalismo matemático: `$$p = P(D|H_0).$$`
+
+---
+# O que *não* é o `\(p\)`-valor?
+
+--
+
+* `\(p\)`-valor não é a probabilidade da Hipótese nula: `\(P(D|H_0) \neq P(H_0|D)\)`. Exemplo: `$$P(\text{tosse} | \text{COVID}) \neq P(\text{COVID} | \text{tosse}).$$`
+
+--
+
+* `\(p\)`-valor não é a probabilidade dos dados serem produzidos pelo acaso.
+
+--
+
+* `\(p\)`-valor mensura o tamanho do efeito de um teste estatístico.
 
 ---
 # `\(p\)`-valor
+
+.pull-left[
+**Fisher**
+
+&lt;img src="images/fisher.jpg" width="200" /&gt;
+]
+
+--
+
+.pull-right[
+&lt;img src="index_files/figure-html/critical_area-1.png" width="504" /&gt;
+]
 
 .footnote[Figura da [Wikipedia](https://www.wikipedia.org/).]
 
 ---
 # Intervalo de Confiança
 
+
+---
+class: inverse, middle
+
+&lt;img src="images/great_power.png" width="100%" /&gt;
+
 ---
 # Créditos!
 
 Slides criado pelo pacote R [`xaringan`](https://github.com/yihui/xaringan).
 
+Código Fonte dos Slides disponível no GitHub [storopoli/literacia-dados](https://github.com/storopoli/literacia-dados).
+
 .pull-left[
-&lt;img src="images/Profile Pic.png" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="images/Profile Pic.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 .pull-right[
+[<i class="fas  fa-globe "></i> storopoli.io](https://storopoli.io)
+
 [<i class="fab  fa-linkedin "></i> @storopoli](https://www.linkedin.com/in/storopoli/) 
 
 [<i class="fab  fa-twitter "></i> @JoseStoropoli](https://www.twitter.com/JoseStoropoli)

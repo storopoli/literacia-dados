@@ -1,6 +1,6 @@
 ---
 title: "Literacia de Dados"
-#subtitle: "O que é que eu estou fazendo aqui?"
+subtitle: "Slides -- [.white[storopoli.io/literacia-dados]](https://storopoli.io/literacia-dados)"
 author: 
   - "Jose Storopoli, PhD"
   - '`r knitr::include_graphics(c("images/UNINOVE_CIS.png", "images/UNINOVE_PPGA.png"), dpi = 400)`'
@@ -57,7 +57,8 @@ extra_css <- list(
     display = "flex",
     width   = "100%",
     flex    = "1 1 auto"
-  )
+  ),
+  "white" = list("color" = "white !important")
 )
 
 # UNINOVE Colors
@@ -91,13 +92,137 @@ xaringanExtra::use_tachyons()
 xaringanExtra::use_webcam()
 ```
 
+# Literacia de Dados
+
+.pull-left[
+```{r corona1}
+knitr::include_graphics("images/corona-news-1.jpg")
+```
+
+]
+
+.pull-right[
+```{r corona2}
+knitr::include_graphics("images/corona-news-2.jpeg")
+```
+]
+
+???
+
+O modelo de risco proporcional de Cox se baseia numa função de sobrevivência e um conjunto de covariáveis $h(t)=h_{0}(t) \times \exp \left\{b_{1} x_{1}+b_{2} x_{2}+\cdots+b_{p} x_{p}\right\}$. Onde $h_0$ é o risco basal, que é estimada de maneira não-paramétrica (diferente de outros modelos estatísticos), portanto a assume-se que a sobrevivência não segue uma distribuição estatística particular. O modelo de Cox é essencialmente uma regressão linear múltipla do logaritmo do risco das variáveis $x_i$, com o risco basal sendo uma "constante" que varia com o tempo. As covariáveis, então, agem multiplicativamente sobre o risco em qualquer ponto no tempo, e isso nos fornece a suposição-chave do modelo PH: o risco do evento em qualquer grupo é um múltiplo constante do risco em qualquer outro.
+
+---
 
 #  Literacia de Dados
 
-Definição da Wikipedia - https://pt.wikipedia.org/wiki/Alfabetização_de_dados
+**Definição da Wikipedia**:
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+"capacidade de <u>ler</u>, <u>gerenciar</u>, <u>analisar</u> e <u>argumentar</u> por meio de <u>dados</u> (...) requer certas habilidades que envolvem a <u>leitura e a compreensão de dados</u>, também conhecidos como informações"
+]
+
+.footnote[[Wikipedia - Alfabetização de Dados](https://pt.wikipedia.org/wiki/Alfabetização_de_dados).]
 
 ---
 # O que são Dados?
+
+**Definição da OCDE**:
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+Dados são <u>características</u> ou <u>informações</u>, geralmente numéricas, <u>coletadas por meio de observação</u> sobre uma ou mais pessoas ou objetos.
+]
+
+.footnote[Traduzido de: **OECD** - Glossary of Statistical Terms. OECD. 2008. p. 119. ISBN 978-92-64-025561.]
+
+---
+# Dados Abertos
+
+```{r osf_example, out.width='45%', fig.align='center'}
+knitr::include_graphics("images/osf_example.png", dpi = 300)
+```
+
+.footnote[[Repositório de dados da OSF](https://osf.io/ypbf6/) do artigo: Storopoli, J., da Silva Neto, W. L. B., & Mesch, G. S. (2020). Confidence in social institutions, perceived vulnerability and the adoption of recommended protective behaviors in Brazil during the COVID-19 pandemic. Social Science & Medicine, 265, 113477.]
+
+---
+# Dados Abertos
+
+.pull-left[
+[Agência FAPESP](https://agencia.fapesp.br/historico-de-atividade-fisica-nao-interfere-no-prognostico-de-casos-graves-de-covid-19/35048/)
+
+```{r ag-fapesp-news}
+knitr::include_graphics("images/ag-fapesp-news.png")
+```
+
+]
+
+.pull-right[
+[medRxiv](https://www.medrxiv.org/content/10.1101/2020.11.25.20237925v1)
+
+```{r ag-fapesp-full}
+knitr::include_graphics("images/ag-fapesp-full.png")
+```
+]
+
+
+---
+# Dados Abertos
+
+.pull-left[
+[`Brasil.io`](https://brasil.io/datasets/)
+
+```{r brasil-io}
+knitr::include_graphics("images/brasil-io.png")
+```
+]
+
+.pull-right[
+[`juliohm/awesome-brazil-data`](https://github.com/juliohm/awesome-brazil-data)
+
+```{r awesome-brasil-data}
+knitr::include_graphics("images/awesome-brazil-data.png")
+```
+]
+
+---
+
+# Como que a Ciência Avança?
+
+**Método Científico Hipótetico Dedutivo**
+
+```{r graph-hipotetico-dedutivo, out.width='100%'}
+grViz("
+ digraph hipotetico_dedutivo {
+  forcelabels = true;
+  graph [overlap = false,
+         fontsize = 12,
+         rankdir = TD]
+  node [shape = oval,
+        fontname = Helvetica]
+  A [label = 'Teoria']
+  B [label = 'Empiria']
+  A -> B [dir = forward,
+          xlabel = ' Hipótese  ',
+          tailport = 'e',
+          headport = 'e']
+  B -> A [dir = backward,
+          xlabel = 'Predições ',
+          tailport = 'w',
+          headport = 'w']
+} 
+")
+```
+
+.footnote[[Wikipedia - Método hipotético-dedutivo](https://pt.wikipedia.org/wiki/Método_hipotético-dedutivo).]
+
+---
+class: center, middle
+# Método Científico
+
+<video width="600" height="400" controls>
+  <source src="images/feynman.mp4" type="video/mp4">
+</video>
+
+.footnote[[Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) - Universidade de Cornell, 9 de Novembro de 1964]
 
 ---
 # Como que a Ciência Avança?
@@ -127,10 +252,11 @@ exposto ao longo do tempo, para a identificação dos efeitos da exposição na
 incidência do evento de interesse.
 
 ---
-## Estatística
+# Estatística
 
+--
 .pull-left[
-### Descritiva
+**Descritiva**
 ```{r graph-estatistica-descritiva, out.width='100%', fig.align='left'}
 grViz("
  digraph estatistica_descritiva {
@@ -151,8 +277,9 @@ grViz("
 ```
 ]
 
+--
 .pull-right[
-### Inferencial
+**Inferencial**
 ```{r graph-estatistica-inferencial, out.width='100%', fig.align='right'}
 grViz("
  digraph estatistica_inferencial {
@@ -178,45 +305,27 @@ grViz("
 ]
 
 ---
-# Machine Learning vs Estatística
-
-```{r sample-data}
-n <- 10
-df <- tibble::tibble(x = 1:n,
-                     y = (1:n) + rnorm(n, 0, 2))
-base_plot <- df %>%
-  ggplot(aes(x, y)) +
-  geom_point(size = 5) +
-  theme_void() +
-  theme(
-    axis.title.x = element_blank(),
-    axis.text.x = element_blank(),
-    axis.ticks.x = element_blank(),
-    axis.title.y = element_blank(),
-    axis.text.y = element_blank(),
-    axis.ticks.y = element_blank()
-  )
-```
+# Distribuição Estatística
 
 .pull-left[
-### Estatística
-
-```{r estatistica-plot}
-base_plot + geom_smooth(size = 2, alpha = 0.5, method = "lm", se = F)
+```{r dist_anim, fig.align='center'}
+# retirado de https://stackoverflow.com/a/61500224
+# criado com o gif.R
+knitr::include_graphics("images/dist_anim.gif")
 ```
+
 ]
 
 .pull-right[
-### Machine Learning
-
-```{r ml-plot}
-base_plot + geom_smooth(size = 2, color = "red", span = 0.3, se = F)
+```{r dist, fig.align='center'}
+knitr::include_graphics("images/dist.png")
 ```
 ]
 
 ---
 # Distribuições Normais e não-Normais
 
+--
 .pull-left[
 ```{r dist-normal}
 ggplot(data.frame(x = c(-4, 4)), aes(x, size = 3)) + 
@@ -227,20 +336,21 @@ ggplot(data.frame(x = c(-4, 4)), aes(x, size = 3)) +
   mean = c(0, 1, .5), 
   sd = c(1, .5, 2), 
   col = c('red', 'blue', 'green')
-) +
-  theme_void() +
+  ) +
+  theme_bw() +
   theme(
     axis.title.x = element_blank(),
-    axis.text.x = element_blank(),
-    axis.ticks.x = element_blank(),
+    #axis.text.x = element_blank(),
+    #axis.ticks.x = element_blank(),
     axis.title.y = element_blank(),
-    axis.text.y = element_blank(),
-    axis.ticks.y = element_blank(),
+    #axis.text.y = element_blank(),
+    #axis.ticks.y = element_blank(),
     legend.position = "none"
   )
 ```
 ]
 
+--
 .pull-right[
 ```{r dist-not-normal}
 ggplot(data.frame(x = c(-1, 6)), aes(x, size = 3)) + 
@@ -252,14 +362,14 @@ ggplot(data.frame(x = c(-1, 6)), aes(x, size = 3)) +
   sdlog = c(1, 1, 1), 
   col = c('red', 'blue', 'green')
 ) +
-  theme_void() +
+  theme_bw() +
   theme(
     axis.title.x = element_blank(),
-    axis.text.x = element_blank(),
-    axis.ticks.x = element_blank(),
+    #axis.text.x = element_blank(),
+    #axis.ticks.x = element_blank(),
     axis.title.y = element_blank(),
-    axis.text.y = element_blank(),
-    axis.ticks.y = element_blank(),
+    #axis.text.y = element_blank(),
+    #axis.ticks.y = element_blank(),
     legend.position = "none"
   )
 ```
@@ -274,48 +384,324 @@ knitr::include_graphics("images/assumptions-vs-reality.jpeg")
 
 .footnote[Figura de [Katherine Hoffman](https://www.khstats.com/blog/tmle/tutorial/). Reprodução Autorizada.]
 
+???
+**Katherine Hoffman**: Biostatistician at Weill Cornell Medicine in New York City
+
+---
+class: inverse, middle, center
+
+# Estatística Descritiva
+
+`r icon::fa("chart-pie", size = 5)`
+
+---
+# Estatística Descritiva
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+"Sumariza e quantifica as características de uma amostra de dados observados".
+]
+
+--
+
+## Geralmente dividi-se em:
+
+* **Medidas de Centralidade**: média, mediana, moda ...
+
+* **Medidas de Dispersão**: desvio padrão, variância, correlação, percentis, quartis ...
+
 ---
 # Medidas de Centralidade - Média, Mediana e Moda
+
+```{r media-moda-mediana, out.width='38%', fig.align='center'}
+knitr::include_graphics("images/media_mediana_moda.png", dpi = 300)
+```
+
+---
+# Média vs Mediana
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+O que acontece quando o <u>Bill Gates</u> entra em um restaurante?
+]
+
+--
+.washed-blue.bg-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
+A <u>média salarial</u> dos consumidores do restaurante sobre 50 mil dólares!
+]
 
 ---
 # Medidas de Dispersão - Desvio Padrão
 
+```{r desvio-padrao, out.width='100%'}
+knitr::include_graphics("images/desvio_padrao.png", dpi = 300)
+```
+
 ---
-# Medidas de Dispersão
+# Medidas de Dispersão - Percentil e IQR
 
-### Percentil
+```{r percentil-IQR, out.width='50%', fig.align='center'}
+knitr::include_graphics("images/percentil-IQR.png", dpi = 300)
+```
 
-### IQR
+---
+class: inverse, middle, center
+
+# Estatística Descritiva
+
+`r icon::fa("bullseye", size = 5)`
+
+## Colocando em Prática
 
 ---
 # Como ler tabelas
 
----
-# Como ler gráficos
+.pull-left[
+```{r fig-palmers-1}
+knitr::include_graphics("images/penguis-species.png")
+```
+]
+
+.pull-right[
+```{r fig-palmers-2}
+knitr::include_graphics("images/penguins-bill.png")
+```
+]
+
+.footnote[Da esquerda para direita: as diferentes espécies de pinguins Palmer e ilustração do bico do pinguim - Figuras de [Allison Horst](https://allisonhorst.github.io/palmerpenguins)]
+
+???
+Vamos usar o *dataset* sobre pinguins que foram encontrados próximos da estação de Palmer na Antártica
 
 ---
-# Hipótese Nula
+# Como ler tabelas
+
+```{r palmerpenguins}
+library(magrittr)
+library(palmerpenguins)
+penguins <- penguins %>% na.omit() %>% select(species, bill_length_mm, bill_depth_mm, body_mass_g)
+```
+
+.small[
+```{r palmerpenguins-mean}
+tbl_summary(penguins,
+            by = species,
+					  statistic = list(
+						all_continuous() ~ "{mean} ({sd})",
+						all_categorical() ~ "{n} ({p}%)"),
+	digits = all_continuous() ~ 2) %>%
+  bold_labels() %>%
+  italicize_levels() %>%
+  as_gt()
+```
+]
+
+---
+
+# Como ler tabelas
+
+.small[
+```{r palmerpenguins-median}
+tbl_summary(penguins,
+            by = species,
+					  statistic = list(
+						all_continuous() ~ "{median} ({p25}, {p75})",
+						all_categorical() ~ "{n} ({p}%)"),
+	digits = all_continuous() ~ 2) %>%
+  bold_labels() %>%
+  italicize_levels() %>%
+  as_gt()
+```
+]
+
+---
+# Como ler gráficos - Diagrama de Caixa
+
+```{r box-plot, fig.align='center'}
+knitr::include_graphics("images/box_plot.png")
+```
+
+.footnote[Também chamado de *Box Plot*]
+
+---
+class: inverse, middle, center
+
+# Estatística Inferencial
+
+`r icon::fa("chart-line", size = 5)`
+
+---
+# Estatística Inferencial
+
+"Conjunto de técnicas e procedimentos para testar hipóteses sobre uma amostra generalizando para uma população-alvo"
+
+## Mistureba de coisas
+
+--
+
+* **Testes Estatísticos** - Pearson & Student
+
+--
+
+* $p$-**valor** - Fisher
+
+--
+
+* **Hipótese Nula** (inclusive o tal dos 5%) - Neyman
+
+--
+
+* **Intervalos de Confiança** - Neyman
+
+.footnote[Além disso eles brigavam entre si...]
+
+---
+# Teste de Hipóteses
+
+.pull-left[
+**Karl Pearson**
+
+```{r pearson}
+knitr::include_graphics("images/pearson.jpg")
+```
+]
+
+--
+.pull-right[
+**William Sealy Gosset (*Student*)**
+
+```{r gosset, out.width=350}
+knitr::include_graphics("images/gosset.jpg")
+```
+]
+
+.footnote[Figuras da [Wikipedia](https://www.wikipedia.org/).]
+
+---
+
+# Teste de Hipóteses
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+Forma de <u>inferência estatística</u> que usa dados de uma <u>amostra</u> para tirar conclusões sobre um <u>parâmetro populacional</u> ou uma <u>distribuição de probabilidade populacional</u>.
+]
+
+--
+
+.washed-blue.bg-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
+.small[Exemplo: Uma amostra de 40 pessoas separadas de maneira aleatória em dois grupos na qual testamos qual a <u>diferença</u> entre o tempo de internação na UTI (<u>parâmetro populacional</u>) para quem toma cloroquina (tratamento) ou comprimido de farinha (placebo).
+]
+]
+
+---
+# Hipótese Nula - $H_0$
+
+.pull-left[
+**Jerzy Neyman**
+
+```{r neyman}
+knitr::include_graphics("images/neyman.jpeg")
+```
+]
+
+--
+
+.pull-right[
+Uma hipótese padrão de que uma quantidade a ser medida é **zero** (nula). Normalmente, a quantidade a ser medida é a **diferença entre duas situações**, ou que um **efeito é inexistente** (nulo).
+]
+
+.footnote[Figura da [Wikipedia](https://www.wikipedia.org/).]
+
+---
+class: inverse, middle, center
+# $p$-valor
+
+`r icon::fa("exclamation-triangle", size = 5)`
+
+## $p$-valores são de difícil entendimento, $p<0.05$.
+
+---
+# O que é o $p$-valor?
+
+* $p$-valor é a probabilidade dos dados que você obteve condicionado que a hipótese nula é verdadeira.
+
+--
+
+* No mundo paralelo da Hipótese Nula, $p$-valor é a probabilidade de você obter dados como os quais da sua amostra.
+
+--
+
+* Para os que gostam do formalismo matemático: $$p = P(D|H_0).$$
+
+---
+# O que *não* é o $p$-valor?
+
+--
+
+* $p$-valor não é a probabilidade da Hipótese nula: $P(D|H_0) \neq P(H_0|D)$. Exemplo: $$P(\text{tosse} | \text{COVID}) \neq P(\text{COVID} | \text{tosse}).$$
+
+--
+
+* $p$-valor não é a probabilidade dos dados serem produzidos pelo acaso.
+
+--
+
+* $p$-valor mensura o tamanho do efeito de um teste estatístico.
 
 ---
 # $p$-valor
+
+.pull-left[
+**Fisher**
+
+```{r fisher, out.width=200}
+knitr::include_graphics("images/fisher.jpg")
+```
+]
+
+--
+
+.pull-right[
+```{r critical_area}
+critical_area <- 1.96
+ggplot(data.frame(x = c(-3, 3)), aes(x)) + 
+  stat_function(fun = dnorm, geom = "area",  fill = "red", xlim = c(-10, -critical_area)) +
+  stat_function(fun = dnorm, geom = "area",  fill = "red", xlim = c(critical_area, 10)) +
+  stat_function(fun = dnorm) + 
+  geom_vline(xintercept = critical_area, linetype = "dashed", color = "red", size = 2) +
+  geom_vline(xintercept = -critical_area, linetype = "dashed", color = "red", size = 2) + 
+  ylim(c(0, 0.4)) +
+  xlim(c(-3, 3)) +
+  theme_bw()
+```
+]
 
 .footnote[Figura da [Wikipedia](https://www.wikipedia.org/).]
 
 ---
 # Intervalo de Confiança
 
+
+---
+class: inverse, middle
+
+```{r great-power, out.width='100%'}
+knitr::include_graphics("images/great_power.png")
+```
+
 ---
 # Créditos!
 
 Slides criado pelo pacote R [`xaringan`](https://github.com/yihui/xaringan).
 
+Código Fonte dos Slides disponível no GitHub [storopoli/literacia-dados](https://github.com/storopoli/literacia-dados).
+
 .pull-left[
-```{r profile-pic, out.width='100%', fig.align='left'}
+```{r profile-pic, out.width='90%', fig.align='left'}
 knitr::include_graphics("images/Profile Pic.png")
 ```
 ]
 
 .pull-right[
+[`r icon::fa("globe")` storopoli.io](https://storopoli.io)
+
 [`r icon::fa("linkedin")` @storopoli](https://www.linkedin.com/in/storopoli/) 
 
 [`r icon::fa("twitter")` @JoseStoropoli](https://www.twitter.com/JoseStoropoli)
