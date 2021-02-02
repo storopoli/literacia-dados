@@ -1,7 +1,7 @@
 Literacia de Dados
 ================
 
--   [Slides](https://storopoli.io/literacia-dados/) para as [Lives de
+-   [Slides](https://storopoli.io/literacia-dados) para as [Lives de
     Inclusão Digital da UNINOVE](https://youtu.be)
 
 -   [Prof. Dr. José Eduardo Storopoli](https://storopoli.io) -
@@ -13,14 +13,14 @@ Literacia de Dados
 
 Para citar o conteúdo use:
 
-    Storopoli (2021). Literacia de Dados. Retrieved from https://storopoli.io/literacia-dados/
+    Storopoli (2021). Literacia de Dados. Retrieved from https://storopoli.io/literacia-dados
 
 Ou em formato BibTeX para LaTeX:
 
     @misc{storopoli2021literaciadados,
       author = {Storopoli, Jose},
       title = {Literacia de Dados},
-      url = {https://storopoli.io/literacia-dados/},
+      url = {https://storopoli.io/literacia-dados},
       year = {2021}
     }
 
