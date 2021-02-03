@@ -85,15 +85,15 @@ top:1em;right:1em;
 })()</script>
 </div>
 
-# Literacia de Dados
+# Na sua tela ultimamente ...
 
 .pull-left[
-![](images/corona-news-1.jpg)&lt;!-- --&gt;
+&lt;img src="images/corona-news-1.jpg" width="100%" /&gt;
 
 ]
 
 .pull-right[
-![](images/corona-news-2.jpeg)&lt;!-- --&gt;
+&lt;img src="images/corona-news-2.jpeg" width="100%" /&gt;
 ]
 
 ???
@@ -101,7 +101,38 @@ top:1em;right:1em;
 O modelo de risco proporcional de Cox se baseia numa função de sobrevivência e um conjunto de covariáveis `\(h(t)=h_{0}(t) \times \exp \left\{b_{1} x_{1}+b_{2} x_{2}+\cdots+b_{p} x_{p}\right\}\)`. Onde `\(h_0\)` é o risco basal, que é estimada de maneira não-paramétrica (diferente de outros modelos estatísticos), portanto a assume-se que a sobrevivência não segue uma distribuição estatística particular. O modelo de Cox é essencialmente uma regressão linear múltipla do logaritmo do risco das variáveis `\(x_i\)`, com o risco basal sendo uma "constante" que varia com o tempo. As covariáveis, então, agem multiplicativamente sobre o risco em qualquer ponto no tempo, e isso nos fornece a suposição-chave do modelo PH: o risco do evento em qualquer grupo é um múltiplo constante do risco em qualquer outro.
 
 ---
+# O que vamos falar hoje?
 
+--
+.pull-left[
+### Literacia de Dados
+* O que são dados?
+* Dados Abertos
+
+### Como a ciência avança?
+* Método Científico
+* Hierarquia de Evidências
+]
+
+--
+.pull-right[
+### Estatística
+* Descritiva
+* Inferencial
+
+### Hipótese Nula
+### `\(p\)`-valores
+]
+
+---
+class: inverse, middle
+
+# Literacia de Dados
+
+&lt;img src="images/data.jpg" width="100%" /&gt;
+
+
+---
 #  Literacia de Dados
 
 **Definição da Wikipedia**:
@@ -210,6 +241,13 @@ evidência maior que os outros observacionais, mas menor nível de evidência qu
 os estudos experimentais. Compara a experiência de um grupo exposto e outro não
 exposto ao longo do tempo, para a identificação dos efeitos da exposição na
 incidência do evento de interesse.
+
+---
+class: inverse, middle
+
+# Estatística
+
+&lt;img src="images/statistics.jpg" width="80%" /&gt;
 
 ---
 # Estatística
@@ -1117,11 +1155,22 @@ Vamos usar o *dataset* sobre pinguins que foram encontrados próximos da estaç�
 ]
 
 ---
+# Como ler gráficos - Gráfico de Dispersão
+
+&lt;img src="index_files/figure-html/scatterplot-1.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+
+---
 # Como ler gráficos - Diagrama de Caixa
 
 &lt;img src="images/box_plot.png" width="467" style="display: block; margin: auto;" /&gt;
 
 .footnote[Também chamado de *Box Plot*]
+
+---
+# Exemplo - Diagrama de Caixa
+
+&lt;img src="index_files/figure-html/box-plot-example-1.png" width="504" style="display: block; margin: auto;" /&gt;
 
 ---
 class: inverse, middle, center
@@ -1156,22 +1205,11 @@ class: inverse, middle, center
 .footnote[Além disso eles brigavam entre si...]
 
 ---
-# Teste de Hipóteses
+class: inverse, center, middle
+&lt;img src="index_files/figure-html/statisticians-1.png" width="504" /&gt;
 
-.pull-left[
-**Karl Pearson**
 
-![](images/pearson.jpg)&lt;!-- --&gt;
-]
-
---
-.pull-right[
-**William Sealy Gosset (*Student*)**
-
-&lt;img src="images/gosset.jpg" width="350" /&gt;
-]
-
-.footnote[Figuras da [Wikipedia](https://www.wikipedia.org/).]
+.footnote[Figuras da [.white[Wikipedia]](https://www.wikipedia.org/).]
 
 ---
 
@@ -1191,19 +1229,9 @@ Forma de &lt;u&gt;inferência estatística&lt;/u&gt; que usa dados de uma &lt;u&
 ---
 # Hipótese Nula - `\(H_0\)`
 
-.pull-left[
-**Jerzy Neyman**
-
-![](images/neyman.jpeg)&lt;!-- --&gt;
-]
-
---
-
-.pull-right[
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
 Uma hipótese padrão de que uma quantidade a ser medida é **zero** (nula). Normalmente, a quantidade a ser medida é a **diferença entre duas situações**, ou que um **efeito é inexistente** (nulo).
 ]
-
-.footnote[Figura da [Wikipedia](https://www.wikipedia.org/).]
 
 ---
 class: inverse, middle, center
@@ -1242,72 +1270,18 @@ class: inverse, middle, center
 * `\(p\)`-valor mensura o tamanho do efeito de um teste estatístico.
 
 ---
-# `\(p\)`-valor
+
+# Tamanho do Efeito
+
+
 
 .pull-left[
-**Fisher**
-
-&lt;img src="images/fisher.jpg" width="200" /&gt;
+Todos esses resultados atingem `\(p\)`-valores menores que 5% se conseguirmos uma amostra grande o suficiente
 ]
-
---
 
 .pull-right[
-&lt;img src="index_files/figure-html/critical_area-1.png" width="504" /&gt;
-]
+&lt;img src="index_files/figure-html/plot_effectsize-1.png" width="504" /&gt;
 
-.footnote[Figura da [Wikipedia](https://www.wikipedia.org/).]
-
----
-# Intervalo de Confiança
-
-Intervalos de confiança foram criados como uma solução para os problemas de má-interpretação dos `\(p\)`-valores e sua aplicação se destina ao tamanho do efeito.
-
---
-
-.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
-"Um intervalo de confiança de X% para um parâmetro é um intervalo `\((a, b)\)` gerado por um procedimento que em amostragem repetida tem uma probabilidade de X% de conter o valor verdadeiro do parâmetro, para todos os valores possíveis do parâmetro."
-]
-
----
-
-# Intervalo de Confiança
-
-.washed-blue.bg-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
-.small[Exemplo: Um intervalo de confiança 95% (1.5-3.5) sinaliza que se eu coletar amostrar do mesmo tamanho que a minha 95% dessas amostras terão um parâmetro entre 1.5 e 3.5. 
-]
-]
-
---
-
-.washed-blue.bg-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-.small[Isso não é a probabilidade do meu paramêtro estar entre 1.5 e 3.5 - `\(P(\text{parâmetro} | D)\)`. Na verdade é uma frequência esperada caso eu amostrasse infinitamente amostras do mesmo tamanho da mesma população - mais uma vez `\(P(D | \text{parâmetro})\)`.
-]
-]
-
----
-# Estatística Clássica Inferencial
-
-.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
-.small[Toda estatística clássica inferencial é baseada em frequências e na probabilidade do seu dado, condicionado a algum paramêtro ou hipótese
-`$$P(D|H) \text{ ou } P(D | \text{parâmetro})$$`
-]
-]
-
---
-
-.washed-blue.bg-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-.small[Se você quer o contrário: probabilidade da sua hipótese ou parâmetro condicionada aos dados observados
-`$$P(H|D) \text{ ou } P(\text{parâmetro} | D)$$`
-Talvez [Estatística Bayesiana](https://storopoli.io/Estatistica-Bayesiana/) lhe interesse.
-]
-]
-
----
-# Caso tenha se interessado
-
-.washed-blue.bg-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-Há uma [disciplina do mestrado e doutorado de Estatística](https://storopoli.io/Estatistica/) que ensina tudo isso. O conteúdo dela e material estão todos abertos e com licença gratuita para uso e compartilhamento.
 ]
 
 ---

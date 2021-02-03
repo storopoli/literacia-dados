@@ -92,17 +92,17 @@ xaringanExtra::use_tachyons()
 xaringanExtra::use_webcam()
 ```
 
-# Literacia de Dados
+# Na sua tela ultimamente ...
 
 .pull-left[
-```{r corona1}
+```{r corona1, out.width='100%'}
 knitr::include_graphics("images/corona-news-1.jpg")
 ```
 
 ]
 
 .pull-right[
-```{r corona2}
+```{r corona2, out.width='100%'}
 knitr::include_graphics("images/corona-news-2.jpeg")
 ```
 ]
@@ -112,7 +112,40 @@ knitr::include_graphics("images/corona-news-2.jpeg")
 O modelo de risco proporcional de Cox se baseia numa função de sobrevivência e um conjunto de covariáveis $h(t)=h_{0}(t) \times \exp \left\{b_{1} x_{1}+b_{2} x_{2}+\cdots+b_{p} x_{p}\right\}$. Onde $h_0$ é o risco basal, que é estimada de maneira não-paramétrica (diferente de outros modelos estatísticos), portanto a assume-se que a sobrevivência não segue uma distribuição estatística particular. O modelo de Cox é essencialmente uma regressão linear múltipla do logaritmo do risco das variáveis $x_i$, com o risco basal sendo uma "constante" que varia com o tempo. As covariáveis, então, agem multiplicativamente sobre o risco em qualquer ponto no tempo, e isso nos fornece a suposição-chave do modelo PH: o risco do evento em qualquer grupo é um múltiplo constante do risco em qualquer outro.
 
 ---
+# O que vamos falar hoje?
 
+--
+.pull-left[
+### Literacia de Dados
+* O que são dados?
+* Dados Abertos
+
+### Como a ciência avança?
+* Método Científico
+* Hierarquia de Evidências
+]
+
+--
+.pull-right[
+### Estatística
+* Descritiva
+* Inferencial
+
+### Hipótese Nula
+### $p$-valores
+]
+
+---
+class: inverse, middle
+
+# Literacia de Dados
+
+```{r data_everywhere, out.width='100%'}
+knitr::include_graphics("images/data.jpg")
+```
+
+
+---
 #  Literacia de Dados
 
 **Definição da Wikipedia**:
@@ -250,6 +283,15 @@ evidência maior que os outros observacionais, mas menor nível de evidência qu
 os estudos experimentais. Compara a experiência de um grupo exposto e outro não
 exposto ao longo do tempo, para a identificação dos efeitos da exposição na
 incidência do evento de interesse.
+
+---
+class: inverse, middle
+
+# Estatística
+
+```{r statistics_intro, out.width='80%'}
+knitr::include_graphics("images/statistics.jpg")
+```
 
 ---
 # Estatística
@@ -513,6 +555,23 @@ tbl_summary(penguins,
 ]
 
 ---
+# Como ler gráficos - Gráfico de Dispersão
+
+```{r scatterplot, fig.align='center', out.width='55%'}
+ggplot(penguins, aes(body_mass_g/1000, bill_length_mm)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_bw() +
+  labs(
+    title ="Pinguis",
+    x = "Massa Corporal em Kg",
+    y = "Comprimento do Bico") +
+  scale_x_continuous(labels = scales::label_number(decimal.mark = ",", big.mark = ".", suffix = "kg")) +
+  scale_y_continuous(labels = scales::label_number(suffix = "mm"))
+```
+
+
+---
 # Como ler gráficos - Diagrama de Caixa
 
 ```{r box-plot, fig.align='center'}
@@ -520,6 +579,24 @@ knitr::include_graphics("images/box_plot.png")
 ```
 
 .footnote[Também chamado de *Box Plot*]
+
+---
+# Exemplo - Diagrama de Caixa
+
+```{r box-plot-example, fig.align='center'}
+ggplot(penguins, aes(species, body_mass_g/1000, color = species)) +
+  geom_boxplot() +
+  geom_jitter() +
+  theme_bw() +
+  labs(
+    title ="Pinguis",
+    x = "Espécie",
+    y = "Massa Corporal em Kg") +
+  scale_y_continuous(labels = scales::label_number(decimal.mark = ",", big.mark = ".", suffix = "kg")) +
+  scale_color_brewer(palette = "Set1") +
+  theme(legend.position = "none")
+
+```
 
 ---
 class: inverse, middle, center
@@ -554,26 +631,26 @@ class: inverse, middle, center
 .footnote[Além disso eles brigavam entre si...]
 
 ---
-# Teste de Hipóteses
+class: inverse, center, middle
+```{r statisticians}
+library(cowplot)
+p1 <- ggdraw() + draw_image("images/pearson.jpg") +
+  draw_label("Karl Pearson", color = "black", hjust = 1.2, vjust = 8, size = 16)
+p2 <- ggdraw() + draw_image("images/gosset.jpg") + 
+  draw_label("William  Gosset\n(Student)", color = "orange", hjust = 0.8, vjust = 4, size = 16)
+p3 <- ggdraw() + draw_image("images/fisher.jpg") +
+  draw_label("Ronald Fisher", color = "white", hjust = 0.9, vjust = 10, size = 16)
+p4 <- ggdraw() + draw_image("images/neyman.jpeg") +
+  draw_label("Jerzy Newman", color = "white", hjust = 1.2, vjust = -1, size = 16)
 
-.pull-left[
-**Karl Pearson**
-
-```{r pearson}
-knitr::include_graphics("images/pearson.jpg")
+plot_grid(p1, p2, p3, p4,
+          ncol = 2,
+          label_colour = "red4") +
+  theme(plot.background = element_rect(fill = "#29427A", color = "#29427A"), )
 ```
-]
 
---
-.pull-right[
-**William Sealy Gosset (*Student*)**
 
-```{r gosset, out.width=350}
-knitr::include_graphics("images/gosset.jpg")
-```
-]
-
-.footnote[Figuras da [Wikipedia](https://www.wikipedia.org/).]
+.footnote[Figuras da [.white[Wikipedia]](https://www.wikipedia.org/).]
 
 ---
 
@@ -593,21 +670,9 @@ Forma de <u>inferência estatística</u> que usa dados de uma <u>amostra</u> par
 ---
 # Hipótese Nula - $H_0$
 
-.pull-left[
-**Jerzy Neyman**
-
-```{r neyman}
-knitr::include_graphics("images/neyman.jpeg")
-```
-]
-
---
-
-.pull-right[
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
 Uma hipótese padrão de que uma quantidade a ser medida é **zero** (nula). Normalmente, a quantidade a ser medida é a **diferença entre duas situações**, ou que um **efeito é inexistente** (nulo).
 ]
-
-.footnote[Figura da [Wikipedia](https://www.wikipedia.org/).]
 
 ---
 class: inverse, middle, center
@@ -646,85 +711,65 @@ class: inverse, middle, center
 * $p$-valor mensura o tamanho do efeito de um teste estatístico.
 
 ---
-# $p$-valor
+
+# Tamanho do Efeito
+
+```{r effectsize}
+plot_effectsize <- function(ES, show.legend = F) {
+  require(ggplot2)
+  require(dplyr)
+  # get mean2 depending on value of ES from d = (u1 - u2)/sd
+  mean1 <- ES * 1 + 1
+  df <- dplyr::tibble(
+    x = seq(1 - 3 * 1, mean1 + 3 * 1, .01),
+    y1 = dnorm(x, 1, 1),
+    y2 = dnorm(x, mean1, 1),
+    y.poly = pmin(y1, y2)
+  )
+  plot <- ggplot2::ggplot(data = df) +
+    # add line for treatment group
+    ggplot2::geom_line(aes(x = x, y = y1, color = "Grupo 2")) +
+    # add line for control group
+    ggplot2::geom_line(aes(x = x, y = y2, color = "Grupo 1")) +
+    # shade overlap
+    ggplot2::geom_polygon(aes(x = x, y = y.poly),
+                          fill = "red", alpha = I(4 / 10),
+                          show.legend = F) +
+    # add vlines for group means
+    ggplot2::geom_vline(xintercept = 1, linetype="dotted") + 
+    ggplot2::geom_vline(xintercept = mean1, linetype="dotted") + 
+    # add plot title
+    ggplot2::labs(title = paste0("Tamanho de Efeito " , ES),
+                  x = NULL,
+                  y = NULL) +
+    # change colors and legend annotation
+    ggplot2::scale_color_manual("Grupo", 
+                                values = c("Grupo 2" = "black", "Grupo 1" = "red")) +
+    theme_bw()
+  if (show.legend == FALSE) {
+    plot <- plot + theme(legend.position = "none")
+    return(plot)
+  }
+  else{
+    return(plot)
+  }
+}
+```
 
 .pull-left[
-**Fisher**
-
-```{r fisher, out.width=200}
-knitr::include_graphics("images/fisher.jpg")
-```
+Todos esses resultados atingem $p$-valores menores que 5% se conseguirmos uma amostra grande o suficiente
 ]
-
---
 
 .pull-right[
-```{r critical_area}
-critical_area <- 1.96
-ggplot(data.frame(x = c(-3, 3)), aes(x)) + 
-  stat_function(fun = dnorm, geom = "area",  fill = "red", xlim = c(-10, -critical_area)) +
-  stat_function(fun = dnorm, geom = "area",  fill = "red", xlim = c(critical_area, 10)) +
-  stat_function(fun = dnorm) + 
-  geom_vline(xintercept = critical_area, linetype = "dashed", color = "red", size = 2) +
-  geom_vline(xintercept = -critical_area, linetype = "dashed", color = "red", size = 2) + 
-  ylim(c(0, 0.4)) +
-  xlim(c(-3, 3)) +
-  theme_bw()
+```{r plot_effectsize}
+library(purrr)
+library(patchwork)
+list(0.2, 0.5, 0.8) %>% 
+  map(~ plot_effectsize(.x)) %>% 
+  reduce(`+`) +
+  plot_layout(nrow = 3, heights = 3)
 ```
-]
 
-.footnote[Figura da [Wikipedia](https://www.wikipedia.org/).]
-
----
-# Intervalo de Confiança
-
-Intervalos de confiança foram criados como uma solução para os problemas de má-interpretação dos $p$-valores e sua aplicação se destina ao tamanho do efeito.
-
---
-
-.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
-"Um intervalo de confiança de X% para um parâmetro é um intervalo $(a, b)$ gerado por um procedimento que em amostragem repetida tem uma probabilidade de X% de conter o valor verdadeiro do parâmetro, para todos os valores possíveis do parâmetro."
-]
-
----
-
-# Intervalo de Confiança
-
-.washed-blue.bg-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
-.small[Exemplo: Um intervalo de confiança 95% (1.5-3.5) sinaliza que se eu coletar amostrar do mesmo tamanho que a minha 95% dessas amostras terão um parâmetro entre 1.5 e 3.5. 
-]
-]
-
---
-
-.washed-blue.bg-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-.small[Isso não é a probabilidade do meu paramêtro estar entre 1.5 e 3.5 - $P(\text{parâmetro} | D)$. Na verdade é uma frequência esperada caso eu amostrasse infinitamente amostras do mesmo tamanho da mesma população - mais uma vez $P(D | \text{parâmetro})$.
-]
-]
-
----
-# Estatística Clássica Inferencial
-
-.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
-.small[Toda estatística clássica inferencial é baseada em frequências e na probabilidade do seu dado, condicionado a algum paramêtro ou hipótese
-$$P(D|H) \text{ ou } P(D | \text{parâmetro})$$
-]
-]
-
---
-
-.washed-blue.bg-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-.small[Se você quer o contrário: probabilidade da sua hipótese ou parâmetro condicionada aos dados observados
-$$P(H|D) \text{ ou } P(\text{parâmetro} | D)$$
-Talvez [Estatística Bayesiana](https://storopoli.io/Estatistica-Bayesiana/) lhe interesse.
-]
-]
-
----
-# Caso tenha se interessado
-
-.washed-blue.bg-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-Há uma [disciplina do mestrado e doutorado de Estatística](https://storopoli.io/Estatistica/) que ensina tudo isso. O conteúdo dela e material estão todos abertos e com licença gratuita para uso e compartilhamento.
 ]
 
 ---
