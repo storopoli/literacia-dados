@@ -185,9 +185,13 @@ knitr::include_graphics("images/osf_example.png", dpi = 300)
 ```{r ag-fapesp-news}
 knitr::include_graphics("images/ag-fapesp-news.png")
 ```
-
 ]
 
+.footnote[
+Pinto, A. J., Goessler, K. F., Fernandes, A. L., Murai, I. H., Sales, L. P., Reis, B. Z., ... & Gualano, B. (2020). No associations between physical activity and clinical outcomes among hospitalized patients with severe COVID-19. medRxiv.
+]
+
+--
 .pull-right[
 [medRxiv](https://www.medrxiv.org/content/10.1101/2020.11.25.20237925v1)
 
@@ -198,8 +202,9 @@ knitr::include_graphics("images/ag-fapesp-full.png")
 
 
 ---
-# Dados Abertos
+# Onde encontrar dados?
 
+--
 .pull-left[
 [`Brasil.io`](https://brasil.io/datasets/)
 
@@ -208,6 +213,7 @@ knitr::include_graphics("images/brasil-io.png")
 ```
 ]
 
+--
 .pull-right[
 [`juliohm/awesome-brazil-data`](https://github.com/juliohm/awesome-brazil-data)
 
@@ -217,8 +223,16 @@ knitr::include_graphics("images/awesome-brazil-data.png")
 ]
 
 ---
+class: inverse, middle, center
+# Como a ciência avança?
 
-# Como que a Ciência Avança?
+```{r science, out.width='80%'}
+knitr::include_graphics("images/science.png")
+```
+
+---
+
+# Como a Ciência Avança?
 
 **Método Científico Hipótetico Dedutivo**
 
@@ -232,9 +246,9 @@ grViz("
   node [shape = oval,
         fontname = Helvetica]
   A [label = 'Teoria']
-  B [label = 'Empiria']
+  B [label = 'Realidade']
   A -> B [dir = forward,
-          xlabel = ' Hipótese  ',
+          xlabel = 'Hipóteses ',
           tailport = 'e',
           headport = 'e']
   B -> A [dir = backward,
@@ -256,6 +270,58 @@ class: center, middle
 </video>
 
 .footnote[[Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) - Universidade de Cornell, 9 de Novembro de 1964]
+
+---
+# Teoria vs Realidade
+
+.washed-blue.bg-blue.b--navy.ba.bw2.br3.shadow-5.ph4.mt5[
+Se sua teoria discordar da realidade, sua teoria está errada. Não importa o quão bela ela é, o quão inteligente você é, quem você é. Se ela discorda da realidade ela está errada!
+]
+
+.footnote[[Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) - Universidade de Cornell, 9 de Novembro de 1964]
+
+---
+# Teoria vs Realidade
+
+.pull-left[
+Objetos pesados caem mais rápido que objetos leves.
+
+```{r aristotle, out.width='60%'}
+knitr::include_graphics("images/aristotle.png")
+```
+]
+
+--
+.pull-right[
+```{r galileo_pisa, out.width='70%'}
+knitr::include_graphics("images/galileo_pisa.jpg")
+```
+]
+
+---
+# Teoria vs Realidade
+
+.pull-left[
+A gravidade afeta não só a materia mas também a luz.
+
+```{r einstein, out.width='50%'}
+knitr::include_graphics("images/einstein.jpg")
+```
+]
+
+--
+.pull-right[
+```{r einstein_eclipse}
+knitr::include_graphics("images/einstein_eclipse.jpg")
+```
+]
+
+.footnote[
+[Eclipse Solar de 29 de Maio de 1919](https://en.wikipedia.org/wiki/Solar_eclipse_of_May_29,_1919)
+]
+
+???
+A previsão de Albert Einstein da curvatura da luz pela gravidade do Sol, um dos componentes de sua teoria geral da relatividade, pode ser testada durante um eclipse solar, quando estrelas com posição aparente perto do sol se tornam visíveis.
 
 ---
 # Como que a Ciência Avança?
@@ -700,15 +766,15 @@ class: inverse, middle, center
 
 --
 
-* $p$-valor não é a probabilidade da Hipótese nula: $P(D|H_0) \neq P(H_0|D)$. Exemplo: $$P(\text{tosse} | \text{COVID}) \neq P(\text{COVID} | \text{tosse}).$$
+* $p$-valor **não** é a probabilidade da Hipótese nula: $P(D|H_0) \neq P(H_0|D)$. Exemplo: $$P(\text{tosse} | \text{COVID}) \neq P(\text{COVID} | \text{tosse}).$$
 
 --
 
-* $p$-valor não é a probabilidade dos dados serem produzidos pelo acaso.
+* $p$-valor **não** é a probabilidade dos dados serem produzidos pelo acaso.
 
 --
 
-* $p$-valor mensura o tamanho do efeito de um teste estatístico.
+* $p$-valor **não** mensura o tamanho do efeito de um teste estatístico.
 
 ---
 
