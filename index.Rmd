@@ -4,7 +4,8 @@ subtitle: "Slides -- [.white[storopoli.io/literacia-dados]](https://storopoli.io
 author: 
   - "Jose Storopoli, PhD"
   - '`r knitr::include_graphics(c("images/UNINOVE_CIS.png", "images/UNINOVE_PPGA.png"), dpi = 400)`'
-date: '08/02/2021'
+  - "[![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)"
+date: "08/02/2021"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -853,9 +854,11 @@ Slides criado pelo pacote R [`xaringan`](https://github.com/yihui/xaringan).
 Código Fonte dos Slides disponível no GitHub [storopoli/literacia-dados](https://github.com/storopoli/literacia-dados).
 
 .pull-left[
-```{r profile-pic, out.width='90%', fig.align='left'}
+```{r profile-pic, out.width='70%', fig.align='left'}
 knitr::include_graphics("images/Profile Pic.png")
 ```
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
 ]
 
 .pull-right[
@@ -870,3 +873,7 @@ knitr::include_graphics("images/Profile Pic.png")
 [`r icon::fa("paper-plane")` josees@uni9.pro.br](mailto:josees@uni9.pro.br)
 
 ]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
