@@ -512,7 +512,7 @@ class: inverse, middle, center
 
 --
 
-## Geralmente dividi-se em:
+## Geralmente divide-se em:
 
 * **Medidas de Centralidade**: média, mediana, moda ...
 
