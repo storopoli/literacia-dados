@@ -169,40 +169,6 @@ Dados são <u>características</u> ou <u>informações</u>, geralmente numérica
 .footnote[Traduzido de: **OECD** - Glossary of Statistical Terms. OECD. 2008. p. 119. ISBN 978-92-64-025561.]
 
 ---
-# Dados Abertos
-
-```{r osf_example, out.width='45%', fig.align='center'}
-knitr::include_graphics("images/osf_example.png", dpi = 300)
-```
-
-.footnote[[Repositório de dados da OSF](https://osf.io/ypbf6/) do artigo: Storopoli, J., da Silva Neto, W. L. B., & Mesch, G. S. (2020). Confidence in social institutions, perceived vulnerability and the adoption of recommended protective behaviors in Brazil during the COVID-19 pandemic. Social Science & Medicine, 265, 113477.]
-
----
-# Dados Abertos
-
-.pull-left[
-[Agência FAPESP](https://agencia.fapesp.br/historico-de-atividade-fisica-nao-interfere-no-prognostico-de-casos-graves-de-covid-19/35048/)
-
-```{r ag-fapesp-news}
-knitr::include_graphics("images/ag-fapesp-news.png")
-```
-]
-
-.footnote[
-Pinto, A. J., Goessler, K. F., Fernandes, A. L., Murai, I. H., Sales, L. P., Reis, B. Z., ... & Gualano, B. (2020). No associations between physical activity and clinical outcomes among hospitalized patients with severe COVID-19. medRxiv.
-]
-
---
-.pull-right[
-[medRxiv](https://www.medrxiv.org/content/10.1101/2020.11.25.20237925v1)
-
-```{r ag-fapesp-full}
-knitr::include_graphics("images/ag-fapesp-full.png")
-```
-]
-
-
----
 # Onde encontrar dados?
 
 --
