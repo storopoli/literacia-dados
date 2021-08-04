@@ -19,7 +19,5 @@ install.packages("gtsummary")
 install.packages("remotes")
 remotes::install_github("gadenbuie/xaringanExtra")
 remotes::install_github("gadenbuie/countdown")
-remotes::install_github("mitchelloharawild/icon")
 remotes::install_github("hadley/emo")
-remotes::install_github("mitchelloharawild/icon",  # or @v0.1.0
-                        ref = remotes::github_release())
+remotes::install_github("mitchelloharawild/icons")

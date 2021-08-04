@@ -1,9 +1,9 @@
 ---
 title: "Literacia de Dados"
-subtitle: "Slides -- [.white[storopoli.io/literacia-dados]](https://storopoli.io/literacia-dados)"
-author: 
+subtitle: "Slides -- [.white[storopoli.io/literacia-dados]](https://storopoli.io/literacia-dados)\nCódigo -- [.white[storopoli/literacia-dados]](https://github.com/storopoli/literacia-dados)"
+author:
   - "Jose Storopoli, PhD"
-  - '`r knitr::include_graphics(c("images/UNINOVE_CIS.png", "images/UNINOVE_PPGA.png"), dpi = 400)`'
+  - '`r knitr::include_graphics(c(here::here("images", "UNINOVE_PPGI.png"), here::here("images", "UNINOVE_CIS.png")), dpi = 400)`'
   - "[![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)"
 date: "08/02/2021"
 output:
@@ -31,6 +31,7 @@ layout: true
 
 ---
 ```{r setup, include=FALSE}
+library(icons)
 library(ggplot2)
 library(magrittr)
 library(DiagrammeR)
@@ -222,7 +223,7 @@ grViz("
           xlabel = 'Predições ',
           tailport = 'w',
           headport = 'w']
-} 
+}
 ")
 ```
 
@@ -347,7 +348,7 @@ grViz("
   A -> {B C D E} [dir = forward,
                     tailport = 'e',
                     headport = 'w']
-} 
+}
 ")
 ```
 ]
@@ -374,7 +375,7 @@ grViz("
           label = '  Inferência  ',
           tailport = 'w',
           headport = 'w']
-} 
+}
 ")
 ```
 ]
@@ -403,13 +404,13 @@ knitr::include_graphics("images/dist.png")
 --
 .pull-left[
 ```{r dist_normal}
-ggplot(data.frame(x = c(-4, 4)), aes(x, size = 3)) + 
+ggplot(data.frame(x = c(-4, 4)), aes(x, size = 3)) +
   mapply(function(mean, sd, col) {
     stat_function(fun = dnorm, args = list(mean = mean, sd = sd), col = col)
-  }, 
+  },
   # enter means, standard deviations and colors here
-  mean = c(0, 1, .5), 
-  sd = c(1, .5, 2), 
+  mean = c(0, 1, .5),
+  sd = c(1, .5, 2),
   col = c('red', 'blue', 'green')
   ) +
   theme_bw() +
@@ -428,13 +429,13 @@ ggplot(data.frame(x = c(-4, 4)), aes(x, size = 3)) +
 --
 .pull-right[
 ```{r dist_not_normal}
-ggplot(data.frame(x = c(-1, 6)), aes(x, size = 3)) + 
+ggplot(data.frame(x = c(-1, 6)), aes(x, size = 3)) +
   mapply(function(meanlog, sdlog, col) {
     stat_function(fun = dlnorm, args = list(meanlog = meanlog, sdlog = sdlog), col = col)
-  }, 
+  },
   # enter means, standard deviations and colors here
-  meanlog = c(0, 1, 1.5), 
-  sdlog = c(1, 1, 1), 
+  meanlog = c(0, 1, 1.5),
+  sdlog = c(1, 1, 1),
   col = c('red', 'blue', 'green')
 ) +
   theme_bw() +
@@ -467,7 +468,7 @@ class: inverse, middle, center
 
 # Estatística Descritiva
 
-`r icon::fa("chart-pie", size = 5)`
+`r icon_style(fontawesome("chart-pie", style = "solid"), scale = 5, fill = "white")`
 
 ---
 # Estatística Descritiva
@@ -522,7 +523,7 @@ class: inverse, middle, center
 
 # Estatística Descritiva
 
-`r icon::fa("bullseye", size = 5)`
+`r icon_style(fontawesome("bullseye", style = "solid"), scale = 5, fill = "white")`
 
 ## Colocando em Prática
 
@@ -622,7 +623,7 @@ ggplot(penguins, aes(species, body_mass_g/1000, color = species)) +
   geom_jitter() +
   theme_bw() +
   labs(
-    title ="Pinguis",
+    title = "Pinguis",
     x = "Espécie",
     y = "Massa Corporal em Kg") +
   scale_y_continuous(labels = scales::label_number(decimal.mark = ",", big.mark = ".", suffix = "kg")) +
@@ -636,7 +637,7 @@ class: inverse, middle, center
 
 # Estatística Inferencial
 
-`r icon::fa("chart-line", size = 5)`
+`r icon_style(fontawesome("chart-line", style = "solid"), scale = 5, fill = "white")`
 
 ---
 # Estatística Inferencial
@@ -669,7 +670,7 @@ class: inverse, center, middle
 library(cowplot)
 p1 <- ggdraw() + draw_image("images/pearson.jpg") +
   draw_label("Karl Pearson", color = "black", hjust = 1.2, vjust = 8, size = 16)
-p2 <- ggdraw() + draw_image("images/gosset.jpg") + 
+p2 <- ggdraw() + draw_image("images/gosset.jpg") +
   draw_label("William  Gosset\n(Student)", color = "orange", hjust = 0.8, vjust = 4, size = 16)
 p3 <- ggdraw() + draw_image("images/fisher.jpg") +
   draw_label("Ronald Fisher", color = "white", hjust = 0.9, vjust = 10, size = 16)
@@ -711,7 +712,7 @@ Uma hipótese padrão de que uma quantidade a ser medida é **zero** (nula). Nor
 class: inverse, middle, center
 # $p$-valor
 
-`r icon::fa("exclamation-triangle", size = 5)`
+`r icon_style(fontawesome("exclamation-triangle", style = "solid"), scale = 5, fill = "white")`
 
 ## $p$-valores são de difícil entendimento, $p<0.05$.
 
@@ -789,14 +790,14 @@ plot_effectsize <- function(ES, show.legend = F) {
                           fill = "red", alpha = I(4 / 10),
                           show.legend = F) +
     # add vlines for group means
-    ggplot2::geom_vline(xintercept = 1, linetype="dotted") + 
-    ggplot2::geom_vline(xintercept = mean1, linetype="dotted") + 
+    ggplot2::geom_vline(xintercept = 1, linetype="dotted") +
+    ggplot2::geom_vline(xintercept = mean1, linetype="dotted") +
     # add plot title
     ggplot2::labs(title = paste0("Tamanho de Efeito " , ES),
                   x = NULL,
                   y = NULL) +
     # change colors and legend annotation
-    ggplot2::scale_color_manual("Grupo", 
+    ggplot2::scale_color_manual("Grupo",
                                 values = c("Grupo 2" = "black", "Grupo 1" = "red")) +
     theme_bw()
   if (show.legend == FALSE) {
@@ -817,8 +818,8 @@ Todos esses resultados atingem $p$-valores menores que 5% se conseguirmos uma am
 ```{r plot_effectsize}
 library(purrr)
 library(patchwork)
-list(0.2, 0.5, 0.8) %>% 
-  map(~ plot_effectsize(.x)) %>% 
+list(0.2, 0.5, 0.8) %>%
+  map(~ plot_effectsize(.x)) %>%
   reduce(`+`) +
   plot_layout(nrow = 3, heights = 3)
 ```
@@ -848,15 +849,15 @@ knitr::include_graphics("images/Profile Pic.png")
 ]
 
 .pull-right[
-[`r icon::fa("globe")` storopoli.io](https://storopoli.io)
+[`r fontawesome("globe", style = "solid")` storopoli.io](https://storopoli.io)
 
-[`r icon::fa("linkedin")` @storopoli](https://www.linkedin.com/in/storopoli/) 
+[`r fontawesome$brands$linkedin` @storopoli](https://www.linkedin.com/in/storopoli/)
 
-[`r icon::fa("twitter")` @JoseStoropoli](https://www.twitter.com/JoseStoropoli)
+[`r fontawesome$brands$twitter` @JoseStoropoli](https://www.twitter.com/JoseStoropoli)
 
-[`r icon::fa("github")` @storopoli](http://github.com/storopoli)  
+[`r fontawesome$brands$github` @storopoli](http://github.com/storopoli)
 
-[`r icon::fa("paper-plane")` josees@uni9.pro.br](mailto:josees@uni9.pro.br)
+[`r fontawesome("paper-plane", style = "solid")` josees@uni9.pro.br](mailto:josees@uni9.pro.br)
 
 ]
 
