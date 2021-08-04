@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-* [Slides](https://storopoli.io/literacia-dados) para as [Lives de Inclusão Digital da UNINOVE](https://youtu.be)
+* [Slides](https://storopoli.io/literacia-dados) para as [Lives da UNINOVE](https://uninove.br)
 
 * [Prof. Dr. José Eduardo Storopoli](https://storopoli.io) - [Currículo *Lattes*](http://lattes.cnpq.br/2281909649311607) - [ORCID](https://orcid.org/0000-0002-0559-5176) - [josees@uni9.pro.br](mailto:josees@uni9.pro.br)
 
