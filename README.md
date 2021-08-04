@@ -4,8 +4,7 @@ Literacia de Dados
 [![CC BY-SA
 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
--   [Slides](https://storopoli.io/literacia-dados) para as [Lives de
-    Inclusão Digital da UNINOVE](https://youtu.be)
+-   [Slides](https://storopoli.io/literacia-dados) para as [Lives da UNINOVE](https://uninove.br)
 
 -   [Prof. Dr. José Eduardo Storopoli](https://storopoli.io) -
     [Currículo *Lattes*](http://lattes.cnpq.br/2281909649311607) -
